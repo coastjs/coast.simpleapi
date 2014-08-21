@@ -1,0 +1,13 @@
+{
+    "name": "coast.simpleapi",
+    "version": "0.0.1",
+    "description": "Apiary Simple Stupid API implemented using Coast with NavAL hypermedia.",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Tony Tahmouch <tony@hapi.co> (http://hapi.co/)",
+    "license": "MIT",
+    "dependencies": {
+        "hypermedia": "^1.0.0"
+    }
+}

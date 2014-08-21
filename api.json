@@ -1,0 +1,51 @@
+{
+    "id": "Simple Stupid Hypermedia API",
+    "title": "Notes API is a short texts saving service similar to its physical paper presence on your table.",
+    "protocol": "http",
+    "hostname": "0.0.0.0",
+    "port": "8080",
+    "cors": ["*"],
+    "apis": [
+        {
+            "title": "Get the hypermedia user agent.",
+            "id": "ua",
+            "method": "GET",
+            "uri": "/ua"
+        },
+        {
+            "title": "List all Notes.",
+            "id": "listNotes",
+            "method": "GET",
+            "uri": "/notes"
+        },
+        {
+            "title": "Create a Note.",
+            "id": "createNote",
+            "method": "POST",
+            "uri": "/notes",
+            "headers": {
+                "content-type": "application/json"
+            },
+            "body": [
+                {
+                    "title": "Title of the note.",
+                    "name": "title",
+                    "value": "Buy cheese and bread for breakfast.",
+                    "type": "text"
+                }
+            ]
+        },
+        {
+            "title": "Retrieve a Note.",
+            "id": "retrieveNote",
+            "method": "GET",
+            "uri": "/notes/{id}"
+        },
+        {
+            "title": "Remove a Note.",
+            "id": "removeNote",
+            "method": "DELETE",
+            "uri": "/notes/{id}"
+        }
+    ]
+}
