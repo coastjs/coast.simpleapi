@@ -1,25 +1,28 @@
 {
-    "id": "Simple Stupid Hypermedia API",
-    "title": "Notes API is a short texts saving service similar to its physical paper presence on your table.",
+    "id": "Simple Stupid Api",
+    "title": "This server is a short text saving api.",
+    "debug": true,
     "protocol": "http",
     "hostname": "0.0.0.0",
     "port": "8080",
     "cors": ["*"],
     "apis": [
         {
-            "title": "Get the hypermedia user agent.",
-            "id": "ua",
-            "method": "GET",
-            "uri": "/ua"
+            "title": "Log all incoming requests.",
+            "id": "logRequest"
         },
         {
-            "title": "List all Notes.",
-            "id": "listNotes",
+            "title": "Expose an an in-memory database.",
+            "id": "exposeDatabase"
+        },
+        {
+            "title": "Get all notes.",
+            "id": "getNotes",
             "method": "GET",
             "uri": "/notes"
         },
         {
-            "title": "Create a Note.",
+            "title": "Create a note.",
             "id": "createNote",
             "method": "POST",
             "uri": "/notes",
@@ -36,16 +39,20 @@
             ]
         },
         {
-            "title": "Retrieve a Note.",
-            "id": "retrieveNote",
+            "title": "Get a note.",
+            "id": "getNote",
             "method": "GET",
-            "uri": "/notes/{id}"
+            "uri": "/notes/:id"
         },
         {
-            "title": "Remove a Note.",
-            "id": "removeNote",
+            "title": "Delete a note.",
+            "id": "deleteNote",
             "method": "DELETE",
-            "uri": "/notes/{id}"
+            "uri": "/notes/:id"
+        },
+        {
+            "title": "Log all outgoing responses.",
+            "id": "logResponse"
         }
     ]
 }
